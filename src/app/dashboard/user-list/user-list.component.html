@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 text-right">
+        <p>
+         <strong>Search by User:</strong><input type="text" name="name" id="" [(ngModel)]="queryString">
+          &nbsp;<button class="btn btn-warning" (click)="clearSearch()">Clear</button>
+        </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+          <th class="text-center">ID</th>
+          <th class="text-center">Name</th>
+          <th class="text-center">Surname</th>
+          <th class="text-center">Birthdate</th>
+          <th class="text-center">Phone</th>
+          <th class="text-center">City</th>
+          <th class="text-center">Street</th>
+          <th class="text-center">Number</th>
+          <th class="text-center">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | findUser : 'name' : queryString; let i=index">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.birthDate }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.street }}</td>
+          <td>{{ user.number }}</td>
+          <td>
+              <button class="btn btn-info" (click)="showEditUserForm(user)">Edit</button>&nbsp;
+              <button class="btn btn-danger" (click)="removeUser(user)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

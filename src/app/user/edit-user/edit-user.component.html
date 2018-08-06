@@ -1,0 +1,74 @@
+<div class="container-fluid ">
+    <form *ngIf="editUserForm">
+        <h2>Edit user details</h2>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>ID:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="id" [(ngModel)]="editedUser.id"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Name:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="name" [(ngModel)]="editedUser.name"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Surname:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="surname" [(ngModel)]="editedUser.surname"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Birthdate:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="birthDate" [(ngModel)]="editedUser.birthDate"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Phone:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="phone" [(ngModel)]="editedUser.phone"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>City:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="city" [(ngModel)]="editedUser.city"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Street:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="street" [(ngModel)]="editedUser.street"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>Number:</p> 
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="number" [(ngModel)]="editedUser.number"/>
+            </div>
+        </div>
+        <br>
+        <p>
+            <button type="button" class="btn btn-primary" (click)="updateUser(editedUser)">Submit</button>&nbsp;
+            <button type="button" class="btn btn-warning" (click)="cancelEdits()">Cancel</button>
+          </p>
+    </form>
+</div>

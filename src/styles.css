@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.app-header-style{
+    background-color: dodgerblue; 
+    color:#f1f1f1;
+    font-family: serif;
+}
